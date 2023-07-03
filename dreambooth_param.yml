@@ -1,0 +1,19 @@
+train_params:
+  stable_diffusion_backbone: CompVis/stable-diffusion-v1-4
+  feature_extractor: openai/clip-vit-base-patch32
+  hugging_face_image_store: StatsGary/dreambooth-hackathon-images
+  learning_rate: 2e-06
+  max_train_steps: 400
+  resolution: 512
+  train_bs: 1
+  grad_accum_steps: 8
+  max_gradient_norm: 1.0
+  sample_batch_size: 2
+  model_checkpoint_name: norweigen-fjords-dreambooth
+  random_shuffle_train_set: True
+  use_8bit_optimizer: True 
+  concept_name: norweign-fjords
+  item_type: fjord #Change to person, cartoon, food, etc.
+eval_params:
+  image_save_path: images
+  eval_prompt: a viking on a boat in a fjord
